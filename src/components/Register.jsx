@@ -38,7 +38,7 @@ const Register = () => {
                 Navigate('/')
                 const createAt = result?.user?.metadata?.creationTime;
                 const newUser = {name , email, photoURL, password, createAt}
-                return fetch('http://localhost:5000/users', {  // 🟢 return fetch() to chain it properly
+                return fetch('https://liftup-server.vercel.app/users', {  // 🟢 return fetch() to chain it properly
                     method: 'POST',
                     headers:{
                         'content-type':'application/json'

@@ -17,7 +17,7 @@ const AddCampaign = () => {
         const NewCampaign = {username, useremail, image, campaigntitle, campaigntype, description, Minimumdonationamount, deadline}
         console.log(NewCampaign);
 
-        fetch('http://localhost:5000/campaign', {
+        fetch('https://liftup-server.vercel.app/campaign', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

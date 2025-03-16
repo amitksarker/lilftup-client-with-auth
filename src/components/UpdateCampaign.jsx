@@ -23,7 +23,7 @@ const UpdateCampaign = () => {
                 const UpdateCampaign = {_id, username, useremail, image, campaigntitle, campaigntype, description, Minimumdonationamount, deadline}
                 console.log(UpdateCampaign);
         
-                fetch(`http://localhost:5000/campaign/${campaigns._id}`, {
+                fetch(`https://liftup-server.vercel.app/campaign/${campaigns._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

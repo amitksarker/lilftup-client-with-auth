@@ -39,7 +39,7 @@ const CampaignDetails = () => {
         };
         console.log(donationData);
         
-        fetch('http://localhost:5000/donate', {
+        fetch('https://liftup-server.vercel.app/donate', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -21,20 +21,20 @@ const Router = createBrowserRouter([
             {
                 path: '/',
                 element: <Body></Body>,
-                loader: () => fetch('http://localhost:5000/campaign')
+                loader: () => fetch('https://liftup-server.vercel.app/campaign')
                 
             },
             {
                 path:'allcampaign',
                 element: <AllCampaign></AllCampaign>,
-                loader: () => fetch('http://localhost:5000/campaign')
+                loader: () => fetch('https://liftup-server.vercel.app/campaign')
             },
             {
                 path: 'campaign/:_id',
                 element: <PrivateRoute>
                     <CampaignDetails></CampaignDetails>
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/campaign/${params._id}`)
+                loader: ({ params }) => fetch(`https://liftup-server.vercel.app/campaign/${params._id}`)
             },             
             {
                 path: 'addCampaign',
@@ -47,21 +47,21 @@ const Router = createBrowserRouter([
                 element: <PrivateRoute>
                             <MyCampaign></MyCampaign>
                         </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/campaign')
+                loader: () => fetch('https://liftup-server.vercel.app/campaign')
             },
             {
                 path: 'updateCampaign/:id',
                 element: <PrivateRoute>
                     <UpdateCampaign></UpdateCampaign>
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
+                loader: ({params}) => fetch(`https://liftup-server.vercel.app/campaign/${params.id}`)
             },
             {
                 path: 'Mydonations',
                 element: <PrivateRoute>
                     <MyDonations></MyDonations>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/donate')
+                loader: () => fetch('https://liftup-server.vercel.app/donate')
             },
             {
                 path: 'Login',
